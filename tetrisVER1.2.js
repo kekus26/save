@@ -629,7 +629,7 @@ function randomNumber(n) {
     return Math.round(Math.random() * (n - 1));
 }
 
-
+// rfrjqnj 
 function startTetris() {
 
     createPlatform();
