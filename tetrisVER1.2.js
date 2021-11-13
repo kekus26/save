@@ -629,7 +629,7 @@ function randomNumber(n) {
     return Math.round(Math.random() * (n - 1));
 }
 
-// rfrjqnj 
+
 function startTetris() {
 
     createPlatform();
@@ -849,25 +849,25 @@ function startTetris() {
             ];
 
         // определяет новое положение фигуры в пространстве
-        function getNewState(a) {
+        function horizontalMovementFigure(n) {
 
             flag = true;
 
             // координаты нового положения фигуры (смещение вправо или влево)
             let figureNew = counters < 4 ?
                 [
-                    document.querySelector(`[posX = "${+coordinates[0][0] + a}"][posY = "${coordinates[0][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[1][0] + a}"][posY = "${coordinates[1][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[2][0] + a}"][posY = "${coordinates[2][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[3][0] + a}"][posY = "${coordinates[3][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[0][0] + n}"][posY = "${coordinates[0][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[1][0] + n}"][posY = "${coordinates[1][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[2][0] + n}"][posY = "${coordinates[2][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[3][0] + n}"][posY = "${coordinates[3][1]}"]`),
                 ]
                 :
                 [
-                    document.querySelector(`[posX = "${+coordinates[0][0] + a}"][posY = "${coordinates[0][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[1][0] + a}"][posY = "${coordinates[1][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[2][0] + a}"][posY = "${coordinates[2][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[3][0] + a}"][posY = "${coordinates[3][1]}"]`),
-                    document.querySelector(`[posX = "${+coordinates[4][0] + a}"][posY = "${coordinates[4][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[0][0] + n}"][posY = "${coordinates[0][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[1][0] + n}"][posY = "${coordinates[1][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[2][0] + n}"][posY = "${coordinates[2][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[3][0] + n}"][posY = "${coordinates[3][1]}"]`),
+                    document.querySelector(`[posX = "${+coordinates[4][0] + n}"][posY = "${coordinates[4][1]}"]`),
                 ];
 
             // проверка можно ли двигатся вправо или влево
@@ -896,9 +896,9 @@ function startTetris() {
 
         // проверка нажатия стрнлок
         if (e.keyCode == 37) {
-            getNewState(-1);
+            horizontalMovementFigure(-1);
         } else if (e.keyCode == 39) {
-            getNewState(1);
+            horizontalMovementFigure(1);
         } else if (e.keyCode == 40) {
             move();
         } else if (e.keyCode == 38) {

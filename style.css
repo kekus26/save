@@ -8,13 +8,13 @@
     position: relative;
     overflow: hidden;
     width: 500px;
-    height: 700px;
+    height: 800px;
     border: 1px solid #000;
 }
 
 .tetris {
     width: 500px;
-    height: 900px;
+    height: 1000px;
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
