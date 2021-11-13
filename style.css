@@ -1,58 +1,94 @@
 * {
     box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#game {
-    padding-top: 20px;
-    font-size: 40px;
-    width: 320px;
-    margin: auto;
+    font-family: "Arial Black";
 }
 
 .main {
-    width: 320px;
-    height: 620px;
-    margin: 20px auto 0;
-    border: 10px solid silver;
-    font-size: 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 700px;
+    border: 1px solid #000;
 }
 
-.cell {
-    width: 30px;
-    height: 30px;
-    border: 1px solid silver;
-    display: inline-block;
+.tetris {
+    width: 500px;
+    height: 900px;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
 }
 
-.movingCell {
-    background-color: blue;
+.excel {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
 }
 
-.fixedCell {
-    background-color: green;
+.figure {
+    background-color: #1e488c;
 }
 
-#next-tetro {
+.set {
+    background-color: #ff0000;
+}
+
+.input {
+    display: block;
+    margin: 30px auto;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.controls {
+    padding: 20px;
     position: absolute;
     top: 200px;
-    left: 200px;
-    font-size: 0;
+    right: 200px;
 }
 
-#game-over {
-    font-size: 100px;
-    color: green;
-    text-align: center;
-    display: none;
-    position: absolute;
+.modal {
+    position: fixed;
+    text-transform: uppercase;
+    width: 500px;
+    height: 500px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.button {
+    border: 2px solid #1e488c;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 30px 0;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all .3s;
+}
+
+.button:hover {
+    border-radius: 40px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000000;
 }
