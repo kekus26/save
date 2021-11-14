@@ -629,6 +629,19 @@ function randomNumber(n) {
     return Math.round(Math.random() * (n - 1));
 }
 
+// дает всем эллементам массива array класс myClass
+function addClass(array, myClass) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].classList.add(`${myClass}`);
+    }
+}
+
+// отнимает у всех эллементов массива array класс myClass
+function removeClass(array, myClass) {
+    for (let i = 0; i < array.length; i++) {
+        array[i].classList.remove(`${myClass}`);
+    }
+}
 
 function startTetris() {
 
@@ -669,9 +682,7 @@ function startTetris() {
             ];
 
         // дает всем ячейкам фигуры массива figureBody класс чтобы их было видно
-        for (let i = 0; i < figureBody.length; i++) {
-            figureBody[i].classList.add('figure');
-        }
+        addClass(figureBody, 'figure');
 
     }
 
@@ -682,7 +693,7 @@ function startTetris() {
     let input = document.getElementsByTagName('input')[0];
     input.value = `ваши очки : ${score}`;
 
-    // заставляет фигуры падать 
+    // заставляет фигуры падать
     function movementFigure() {
 
         let moveFlag = true;
@@ -739,18 +750,16 @@ function startTetris() {
                 ];
 
             // возвращаем фигуре класс figure
-            for (let i = 0; i < figureBody.length; i++) {
-                figureBody[i].classList.add('figure');
-            }
+            addClass(figureBody, 'figure');
+
 
         }
         else {
 
             // отнимает у фигуры класс figure и дает ей класс set
-            for (let i = 0; i < figureBody.length; i++) {
-                figureBody[i].classList.remove('figure');
-                figureBody[i].classList.add('set');
-            }
+            removeClass(figureBody, 'figure');
+            addClass(figureBody, 'set');
+
 
             // проверка ряда (удаляет заполненный ряд
             for (let i1 = 1; i1 < 15; i1++) {
@@ -793,9 +802,7 @@ function startTetris() {
                             }
 
                             // добавляем каждому элементу класс set
-                            for (let a = 0; a < newSet.length; a++) {
-                                newSet[a].classList.add('set');
-                            }
+                            addClass(newSet, 'set');
 
                             i1--;
                         }
@@ -881,16 +888,13 @@ function startTetris() {
             if (flag) {
 
                 // отнимаем класс figure
-                for (let i = 0; i < figureBody.length; i++) {
-                    figureBody[i].classList.remove('figure');
-                }
+                removeClass(figureBody, 'figure');
 
                 figureBody = figureNew;
 
                 // возвращаем класс figure
-                for (let i = 0; i < figureBody.length; i++) {
-                    figureBody[i].classList.add('figure');
-                }
+                addClass(figureBody, 'figure');
+
             }
         }
 
@@ -932,15 +936,11 @@ function startTetris() {
 
             if (flag) {
 
-                for (let i = 0; i < figureBody.length; i++) {
-                    figureBody[i].classList.remove('figure');
-                }
+                removeClass(figureBody, 'figure');
 
                 figureBody = figureNew;
 
-                for (let i = 0; i < figureBody.length; i++) {
-                    figureBody[i].classList.add('figure');
-                }
+                addClass(figureBody, 'figure');
 
                 if (rotate < 4) {
                     rotate++;
