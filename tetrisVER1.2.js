@@ -805,7 +805,7 @@ function startTetris() {
 
             // проверка на завершение игры
             for (let i = 1; i < 11; i++) {
-                if (document.querySelector(`[posX = "${i}"][posY = "14"]`).classList.contains('set')) {
+                if (document.querySelector(`[posX = "${i}"][posY = "18"]`).classList.contains('set')) {
                     clearInterval(interval);
                     alert(`game over. ваши очки : ${score}`);
                     break;
