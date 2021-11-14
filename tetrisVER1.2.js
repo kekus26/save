@@ -901,6 +901,8 @@ function startTetris() {
             horizontalMovementFigure(1);
         } else if (e.keyCode == 40) {
             move();
+        } else if (e.keyCode == 13) {
+            alert("pause");
         } else if (e.keyCode == 38) {
 
             flag = true;
