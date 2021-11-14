@@ -646,7 +646,7 @@ function startTetris() {
     let rotate = 1;
 
     // создает рандомную фигуру на поле
-    function createFigure() {
+    function generatingFigure() {
 
         rotate = 1;
         currentFigure = counters < 4 ? randomNumber(classicFigure.length) : randomNumber(customFigure.length);
@@ -675,15 +675,15 @@ function startTetris() {
 
     }
 
-    createFigure();
+    generatingFigure();
 
     let score = 0;
 
     let input = document.getElementsByTagName('input')[0];
     input.value = `ваши очки : ${score}`;
 
-    // заставляет фигуры падать
-    function move() {
+    // заставляет фигуры падать 
+    function movementFigure() {
 
         let moveFlag = true;
 
@@ -817,13 +817,13 @@ function startTetris() {
             else {
                 counters = 0;
             }
-            createFigure();
+            generatingFigure();
         }
     }
 
-    // опускает сгенерированную фигуру в низ на 1 координату каждые 300 милисикунд
+    // опускает сгенерированную фигуру
     let interval = setInterval(() => {
-        move();
+        movementFigure();
     }, speed);
 
     let flag = true;
@@ -900,7 +900,7 @@ function startTetris() {
         } else if (e.keyCode == 39) {
             horizontalMovementFigure(1);
         } else if (e.keyCode == 40) {
-            move();
+            movementFigure();
         } else if (e.keyCode == 13) {
             alert("pause");
         } else if (e.keyCode == 38) {
