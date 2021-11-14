@@ -921,15 +921,15 @@ function startTetris() {
         }
 
         // проверка нажатия стрнлок
-        if (e.keyCode == 37) {
+        if (e.keyCode == 37 || e.keyCode == 65) {
             horizontalMovementFigure(-1);
-        } else if (e.keyCode == 39) {
+        } else if (e.keyCode == 39 || e.keyCode == 68) {
             horizontalMovementFigure(1);
-        } else if (e.keyCode == 40) {
+        } else if (e.keyCode == 40 || e.keyCode == 83) {
             movementFigure();
         } else if (e.keyCode == 13) {
             alert("pause");
-        } else if (e.keyCode == 38) {
+        } else if (e.keyCode == 38 || e.keyCode == 87) {
 
             flag = true;
 
