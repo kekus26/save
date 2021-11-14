@@ -4,17 +4,17 @@
 }
 
 .main {
-    margin: 50px auto;
+    margin: 40px auto;
     position: relative;
     overflow: hidden;
-    width: 500px;
-    height: 800px;
+    width: 400px;
+    height: 720px;
     border: 1px solid #000;
 }
 
 .tetris {
-    width: 500px;
-    height: 1000px;
+    width: 400px;
+    height: 920px;
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
@@ -24,8 +24,8 @@
 }
 
 .excel {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #ccc;
 }
 

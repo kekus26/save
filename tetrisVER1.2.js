@@ -599,7 +599,7 @@ function createPlatform() {
     let tetris = document.createElement('div');
     tetris.classList.add('tetris');
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < 230; i++) {
         let excel = document.createElement('div');
         excel.classList.add('excel');
         tetris.appendChild(excel);
@@ -614,7 +614,7 @@ function createPlatform() {
     let i = 0;
 
     // присваиваем каждой ячейке поля координаты
-    for (let y = 20; y > 0; y--) {
+    for (let y = 23; y > 0; y--) {
         for (let x = 1; x < 11; x++) {
             excel[i].setAttribute('posX', x);
             excel[i].setAttribute('posY', y);
@@ -635,7 +635,7 @@ function startTetris() {
     createPlatform();
 
     let x = 5;
-    let y = 15;
+    let y = 19;
 
     let currentFigure;
     let figureBody;
