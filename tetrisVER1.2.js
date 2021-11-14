@@ -760,8 +760,9 @@ function startTetris() {
             removeClass(figureBody, 'figure');
             addClass(figureBody, 'set');
 
+            let scoreCounter = 0;
 
-            // проверка ряда (удаляет заполненный ряд
+            // проверка ряда (удаляет заполненный ряд)
             for (let i1 = 1; i1 < 15; i1++) {
 
                 let count = 0;
@@ -777,8 +778,7 @@ function startTetris() {
                         // проверка ряда на заполненность
                         if (+count === 10) {
 
-                            score += 100;
-                            input.value = `ваши очки : ${score}`;
+                            scoreCounter++;
 
                             // забираем у всех элементов заполненного ряда класс set
                             for (let i3 = 1; i3 < 11; i3++) {
@@ -809,6 +809,26 @@ function startTetris() {
                     }
                 }
             }
+
+            switch (scoreCounter) {
+                case 1:
+                    score += 100;
+                    break;
+                case 2:
+                    score += 300;
+                    break;
+                case 3:
+                    score += 700;
+                    break;
+                case 4:
+                    score += 1500;
+                    break;
+                case 5:
+                    score += 3100;
+                    break;
+            }
+            
+            input.value = `ваши очки : ${score}`;
 
             // проверка на завершение игры
             for (let i = 1; i < 11; i++) {

@@ -38,65 +38,11 @@
       <option name="presentableId" value="Default" />
       <updated>1636823466483</updated>
       <workItem from="1636823467784" duration="1673000" />
-      <workItem from="1636850361685" duration="5495000" />
+      <workItem from="1636850361685" duration="9406000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>684</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>755</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>765</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>764</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>901</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>909</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>954</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/tetrisVER1.2.js</url>
-          <line>961</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
